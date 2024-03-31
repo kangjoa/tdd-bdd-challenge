@@ -45,17 +45,17 @@ it('should return the circle area', function () {
 
 it('should return null if width is negative', function () {
   const areaVal = utils.area(5, -1);
-  expect(areaVal).to.equal(null);
+  expect(areaVal).to.be.null;
 });
 
 it('should return null if height is negative', function () {
   const perimeterVal = utils.perimeter(5, -2);
-  expect(perimeterVal).to.equal(null);
+  expect(perimeterVal).to.be.null;
 });
 
 it('should return null if radius is negative', function () {
   const circleAreaVal = utils.circleArea(-3);
-  expect(circleAreaVal).to.equal(null);
+  expect(circleAreaVal).to.be.null;
 });
 
 // ========================================================
@@ -150,6 +150,7 @@ it('Should validate that an empty cart has 0 items', function () {
   const shoppingCart = utils.getShoppingCart();
   expect(shoppingCart).to.be.a('array');
   expect(shoppingCart).to.have.lengthOf(0);
+  expect(shoppingCart).to.be.empty;
 });
 
 it('Should return the total cost of all items in the cart', function () {
